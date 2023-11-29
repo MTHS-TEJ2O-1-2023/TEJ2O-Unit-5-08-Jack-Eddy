@@ -13,7 +13,7 @@ basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
 while (true) {
-  if (input.buttonIsPressed(Button.A) === true)
+  if (input.buttonIsPressed(Button.A) === true) {
     // move backwards and turn
     if (distanceToObject <= 10) {
       distanceToObject = sonar.ping(DigitalPin.P0, DigitalPin.P1, PingUnit.Centimeters)
@@ -26,5 +26,6 @@ while (true) {
       basic.showString(distanceToObject.toString())
       robotbit.StpCarMove(-10, 48)
       robotbit.StpCarTurn(90, 48, 125)
-      }
+    }
+  }
 }
